@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="form-update">
+  <form action="/update/" class="form-container" method="POST">
+    {% csrf_token %}
+    <label for="title"><b>Title</b></label>
+    <input style="width:1220px" type="text" placeholder="Enter Title" name="title" required >
+    <label for="abstract"><b>Abstract</b></label>
+    <textarea style="width:1217px" rows='7'placeholder="Write Short Abstract" name="abstract" required ></textarea>
+    <label for="url"><b>Url</b></label>
+    <input style="width:1220px" type="url" placeholder="Enter Url" name="url" required >
+    <label for="type"><b>Type</b></label>
+    <select id="type" name="type" style="width:1220px">
+    <option value="1">Thesis</option>
+    <option value="2">Article</option>
+    <option value="3">Publication</option>
+    <option value="4">Conference Paper</option>
+    <option value="5">Books</option>
+    <option value="6">Chapter</option>
+    <option value="7">Patent</option>
+    <option value="8">Pre-prints</option>
+    <option value="9">Research Internship report</option>
+    </select>
+    <button type="submit" style="width:100px; margin-left:42vw" class="btn">Update</button>
+  </form>
+</div>
+{% endblock %}

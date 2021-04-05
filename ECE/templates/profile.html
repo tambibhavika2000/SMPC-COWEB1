@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="container" style="margin-top:50px">
+<h3 style="margin:20px 0px;"><b>Profile of {{user}}</b></h3>
+{% for project in details %}
+<button class="accordion">{{project.title}}</button>
+<div class="panel">
+  <p class="ap">{{project.abstract}}.....<a class="aap" href="{{project.url}}">Learn More</a></p>
+</div>
+{% endfor %}
+
+</div>
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+{% endblock %}
+

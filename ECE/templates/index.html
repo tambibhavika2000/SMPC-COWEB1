@@ -1,0 +1,132 @@
+{% extends 'base.html' %}
+{% block body %}
+<section class="sliderScetion">
+  <div id="carousel-generic" class="carousel slide" data-ride="carousel">
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active" style="background-image: url('../static/images/BG11.png')">
+      </div>
+      <div class="item" style="background-image: url('../static/images/NITSURAT.png')">
+      </div>
+    </div>
+    <!-- Controls -->
+    <a class="left carousel-control" href="#carousel-generic" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#carousel-generic" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</section>
+
+<section class="aboutus">
+  <div class="container">
+    <h1 style="float: left">ABOUT<span style="color: #f56600"> US</span></h1>
+    <hr style="border: 5px solid #031425; width:75%;margin-top:66px;" />
+    <img class="floating" src="/static/images/books_svg.svg">
+    <div class="container">
+      <h4>Sardar Vallabhbhai National Institute of Technology Surat (SVNIT or NIT Surat), is a public technical university established by the Parliament of India in 1961. <br>It is one of 31 National Institutes of Technology in India recognized by the Government of India as an Institute of National Importance. It is the Anchor Institute for the Auto and Engineering sector and will be training the workforce.
+         The project is also designated as the "Center of Excellence" in water resources and flood management and is supported by the World Bank.<br>
+         NIT Surat is governed by its ex officio visitor, the honorable President of India and the NIT Council who head the NIT organizational structure. Under the NIT Council is NIT Surat's Board of Governors consisting of 12 members that includes representatives of the state of Gujarat, MHRD in addition to other members appointed by the NIT Council and the institute's senate. The Director serves under the Board of Governors, and is the school's chief academic and executive officer. Under the director and the deputy director are the deans, heads of departments, registrar and Chief Hostel Warden.</h4>
+    </div>
+  </div>
+</section>
+
+<img src="/static/images/1.svg" style="width: 100%; height: 70%; margin-left: 0px; background-color: #031425;" ; />
+
+
+<section class="testimonials martop hod">
+  <div class="container">
+    <h1 style="float: right">HEAD'S<span style="color: #f56600"> DESK</span></h1>
+    <hr style="border: 5px solid #031425; width:70%;margin-top:66px;">
+
+  </div>
+  <div class="container">
+    <div class="item col-md-6 col-lg-6">
+      <div class="testiCont">
+        <span class="testimonialImg"><img src="/static/images/Director.jpg"
+            style="height: 100px !important; width: 100px !important;" alt="#"></span>
+
+        <div class="main-content">
+
+          <h4 class="name">From Directors's Desk </h4>
+          <p>Nulla cursus a metus vel placerat. Fusce malesuada volutpat pretium. Lorem ipsum dolor sit amet,
+            consectetur adipiscing elit. Phasellus velit libero, viverra quis euismod vel pellentesque at tortor. Donec
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="item col-md-6 col-lg-6">
+      <div class="testiCont">
+        <span class="testimonialImg"><img src="/static/images/pnp.jpg"
+            style="height: 100px !important; width: 100px !important;" alt="#"></span>
+        <div class="main-content">
+          <h4 class="name">From HOD's Desk</h4>
+          <p>Nulla cursus a metus vel placerat. Fusce malesuada volutpat pretium. Lorem ipsum dolor sit amet,
+            consectetur adipiscing elit. Phasellus velit libero, viverra quis euismod vel pellentesque at tortor. Donec
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+
+<img src="/static/images/2.svg" style="width: 100%; height: 70%; margin-left: 0px; background-color: #031425;" ; />
+<section class="news martop event">
+  <div class="container">
+    <h1 style="float: left">EVENTS & <span style="color: #f56600"> SEMINARS</span></h1>
+    <hr style="border: 5px solid #031425; width:60%;margin-top:66px;">
+  </div>
+  <div class="container">
+    <div class="item col-md-4">
+      <div class="single-news">
+        <div class="news-head overlay">
+          <div class="date">
+            <h4>05<span>May</span></h4>
+          </div>
+          <img src="/static/images/event4.jpeg" alt="#">
+        </div>
+        <div class="news-content">
+          <div class="button">
+            <a href="#" class="btn">Read More<i class="fa fa-angle-double-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="item col-md-4">
+      <div class="single-news">
+        <div class="news-head overlay">
+          <div class="date">
+            <h4>05<span>May</span></h4>
+          </div>
+          <img src="/static/images/event5.jpeg" alt="#">
+        </div>
+        <div class="news-content">
+          <div class="button">
+            <a href="#" class="btn">Read More<i class="fa fa-angle-double-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="item col-md-4">
+      <div class="single-news">
+        <div class="news-head overlay">
+          <div class="date">
+            <h4>05<span>May</span></h4>
+          </div>
+          <img src="/static/images/event6.jpeg" alt="#">
+        </div>
+        <div class="news-content">
+          <div class="button">
+            <a href="#" class="btn">Read More<i class="fa fa-angle-double-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

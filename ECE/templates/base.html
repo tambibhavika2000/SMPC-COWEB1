@@ -1,0 +1,69 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+   <title>SVNIT-ECE</title>
+   <meta charset="utf-8" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <!-- bootstrap Css -->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+   <!-- fOR ANIMATION Css -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css" />
+   <!-- Owl caurosal -->
+   <link rel="stylesheet" href="{%static 'plugin/OWL/css/owl.theme.default.min.css' %}" />
+   <link rel="stylesheet" href="{%static 'plugin/OWL/css/owl.carousel.min.css' %}" />
+   <!-- Font Awsome -->
+   <link rel="stylesheet" href="{%static 'css/font-awesome.min.css' %}" />
+   <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+   <!--Custome CSS  -->
+   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+   <link rel="stylesheet" href="{%static 'css/style.css' %}" />
+   <link rel="stylesheet" href="{%static 'css/responsive.css' %}" />
+   <!--FOnts  -->
+   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet" />
+   <!-- JavaScripts -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+   <!-- BootStrap -->
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   <!--  -->
+   <script src="{%static 'plugin/OWL/js/owl.carousel.min.js' %}"></script>
+   <!--  -->
+   <script src="{%static 'js/flex-menu.js' %}"></script>
+   <!--  -->
+   <script src="{%static 'js/function.js' %}"></script>
+</head>
+
+<body>
+   <header class="header">
+      <img src="{% static 'images/Banner.svg' %}" style="width: 100%; height: 70%" ; />
+   </header>
+   <div class="header-menu">
+      <div class="container">
+         <ul class="dropDownMenu">
+            <li><a href="/index">Home</a></li>
+            <li><a href="/student">Notice Board</a>
+             <ul>
+                  <li><a href="/teacher">Teachers</a></li>
+                  <li><a href="/student">Students</a></li>
+               </ul>
+            </li>
+            <li>
+               <a href="/research">Research and Innovations</a>
+            </li>
+            <li>
+               <a>Events</a>
+            </li>
+            <li>
+               <a href="">TNP Section</a>
+            </li>
+         </ul>
+      </div>
+   </div>
+   {% block body %} {% endblock %}
+   
+
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="container" style="margin-top:50px;">
+<table class="table table-striped mt-100">
+  <thead>
+    <tr>
+      <th scope="col">Notice</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for notice in notices %}
+    <tr>
+      <td><a href="..\..\media\{{notice.url}}">{{notice.title}}<a></td>
+    </tr>
+{% endfor %}
+  </tbody>
+</table>
+</div>
+
+{% endblock %}
+<script></script>
