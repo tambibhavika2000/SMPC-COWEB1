@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="row mb-2" style="margin:50px; justify-content:center;">
+  {% for i in data %}
+  <div class="col-md-5" style="margin:20px" >
+    <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+      <div class="col p-4 d-flex flex-column position-static">
+        <h3 class="mb-2">{{i.name}}</h3>
+         <strong class="d-inline-block mb-2 text-primary">{{i.position}}</strong>
+        <div class="mb-1 text-muted"><i class="fa fa-envelope-square" aria-hidden="true" style="color:black; margin:5px;"></i>  {{i.email}}</div>
+        <div class="mb-1 text-muted"><i class="fa fa-phone" aria-hidden="true" style="color:black;  margin:5px;"></i>  {{i.phoneno}}</div>
+         <strong class="d-inline-block mb-2 text-primary">Areas</strong>
+        <p class="card-text mb-auto">{{i.research}}</p>
+      </div>
+      <div class="col-auto d-none d-lg-block">
+      <img src="../media/{{i.pic}}" style="width=200px; height=250px; vertical-align: middle;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 20px;
+    border: 2px solid black;"></img>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}

@@ -17,6 +17,9 @@ urlpatterns = [
     path("update/",views.update,name='update'),
     path("profile/",views.profile,name='profile'),
     path("research/<str:pk>",views.see,name="see"),
+    path("faculty/",views.faculty,name="faculty"),
+    path("tnp/",views.tnp,name="tnp"),
+    path("event/<str:pk>",views.event,name="event")
 
 
     

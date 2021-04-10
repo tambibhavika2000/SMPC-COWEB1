@@ -1,87 +1,119 @@
-@media(max-width:1280px){
-    .PopularCourses .owl-carousel .owl-nav button.owl-prev{left:0px;}
-    .PopularCourses .owl-carousel .owl-nav button.owl-next{right:0px;}
+@media(max-width:1280px) {
+    .owl-carousel .owl-nav button.owl-prev {
+        left: 0px;
+    }
+
+    .owl-carousel .owl-nav button.owl-next {
+        right: 0px;
+    }
 
 
 }
-        @media(max-width:1024px){
-        .topheader ul li{ font-size: 12px;}
-        .topheader ul,.topheaderRight ul{ margin: 0; padding: 0px}
-        .header-menu .button .btn{padding: 6px 16px;}
-        .martop{ margin-top: 40px;}
-        .contDetails .txt { font-size: 12px;}
-        .carousel-caption ul li{padding: 12px;font-size: 162x;}
-        .slidetxt1 h1{font-size: 35px;}
-        .slidetxt2 h1{font-size: 35px;}
-        .slidetxt3 h1{font-size: 35px;}
-        .slidetxt1 p{font-size: 12px;}
-        .slidetxt2 p{font-size: 12px;}
-        .slidetxt3 p{font-size: 12px;}
-        .educationSect > p{ font-size: 12px; line-height: 20px;}
-        .educationSect .featuresWrap p{ font-size: 12px; line-height: 15px; word-spacing: 2px;}
-        .enroll-right h2 {text-align: center;font-size: 25px;}
-        .enroll-right p{
-            text-align: justify;
-            font-size: 12px;
-        }
-        .PopularCourses .owl-carousel .owl-nav button{height: 40px; width: 40px;}
-        .PopularCourses .owl-carousel .owl-nav button.owl-next {  right: -40px;}
-        .PopularCourses .owl-carousel .owl-nav button.owl-prev {  left: -40px;}
-        .PopularCourses .meta-left span{font-size: 14px;}
-        .PopularCourses .course-meta .price{padding: 0px 10px ;}
-        .PopularCourses .focusSect{height: 360px;}
 
-        .PopularCourses > p{ font-size: 12px; line-height: 20px;}
-        .PopularCourses .featuresWrap p{ font-size: 12px; line-height: 15px; word-spacing: 2px;}
-        .PopularCourses .focusSect .text-content{padding: 50px 180px 50px;}
-        .PopularCourses .focusSect .text-content p{font-size: 12px;}
-        .PopularCourses .focusSect .text-content h2{font-size: 25px;}
-        .teachers> p{ font-size: 12px; line-height: 20px;}
-        .teachers .featuresWrap p{ font-size: 12px; line-height: 15px; word-spacing: 2px;}
-        .event > p{ font-size: 12px; line-height: 20px;}
-        .enent .featuresWrap p{ font-size: 12px; line-height: 15px; word-spacing: 2px;}
-        .event .event-overlay .single-fact i{font-size: 35px;}
-        .event .event-overlay .single-fact .number{font-size: 30px;}
-        .event .event-overlay .single-fact p{font-size: 14px; margin-bottom: 30px;
-        }
-        .news-content p{margin:10px 0px 10px;}
-        .news .news-info a{font-size: 13px;}
-        .news .news-info{font-size: 14px;margin: 0 0 -6px;}
-        .Bottomfooter:{text-align:center;}
+@media(max-width:1024px) {
+    .martop {
+        margin-top: 40px;
+    }
 
-.news .news-content .news-title a{font-size: 14px;} 
-        .enroll-right .detail{margin-left: 110px;}
-        
-        }
-   
-    @media(max-width:768px){
-        .PopularCourses .focusSect{height: 437px;}
-       }
-     
-   
-    @media(max-width:568px){
-        
-    
-    
+    .event>p {
+        font-size: 12px;
+        line-height: 20px;
     }
-    @media(max-width:480px){
-        
-   
+
+    .event .featuresWrap p {
+        font-size: 12px;
+        line-height: 15px;
+        word-spacing: 2px;
     }
-   @media(max-width:320px){
-    body{margin: 7px;}
-.topheaderRight.pull-right{float: none !important;}
-.topheader ul li{ padding-bottom: 10px;font-size: 18px;}
-.topheaderRight{padding-top: 15px;}
-.logo img {margin: 76px 43px 0px 43px;}
-.contDetails .txt {font-size: 18px;}
- h1{font-size: 18px;}
- .contDetails .txt { font-size: 12px;}
- .topheader ul li{ font-size: 12px;}
-.news .news-info a{font-size: 11px;}
-.event .event-info{font-size: 12px;}
-.PopularCourses .course-meta .price{font-size: 11px;}
-.PopularCourses .meta-left span{font-size: 11px;}
-.PopularCourses .focusSect .text-content{ padding: 50px 12px 50px;}
- .PopularCourses .focusSect .text-content p{padding-bottom: 1px}
- .PopularCourses .focusSect {height: 494px;}
+
+    .event .event-overlay .single-fact i {
+        font-size: 35px;
+    }
+
+    .event .event-overlay .single-fact .number {
+        font-size: 30px;
+    }
+
+    .event .event-overlay .single-fact p {
+        font-size: 14px;
+        margin-bottom: 30px;
+    }
+
+    .news .news-info a {
+        font-size: 13px;
+    }
+
+    .news .news-info {
+        font-size: 14px;
+        margin: 0 0 -6px;
+    }
+
+    .news .news-content .news-title a {
+        font-size: 14px;
+    }
+
+    .enroll-right .detail {
+        margin-left: 110px;
+    }
+
+    section h1 {
+        font-size: 30px;
+    }
+
+}
+
+@media(max-width:768px) {
+
+    section h1 {
+        font-size: 20px;
+    }
+
+    .header-menu .dropDownMenu{
+        margin: 5px;
+        font-size: 8px;
+    }
+
+    .header-menu .dropDownMenu .home a{
+        display: none;
+    }
+
+    .header-menu .dropDownMenu .home{
+        display: none;
+    }
+}
+
+
+@media(max-width:568px) {
+    .header-menu{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media(max-width:480px) {
+    .header-menu{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media(max-width:320px) {
+    body {
+        margin: 7px;
+    }
+
+    h1 {
+        font-size: 18px;
+    }
+    .news .news-info a {
+        font-size: 11px;
+    }
+
+    .event .event-info {
+        font-size: 12px;
+    }
+    .header-menu{
+        display: flex;
+        flex-direction: column;
+    }
+}

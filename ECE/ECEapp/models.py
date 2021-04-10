@@ -1,48 +1,11 @@
 from django.db import models
 from django.contrib.auth.models import User
 from multiselectfield import MultiSelectField
-choices_year={(1,'First Year'),(2,'Second Year'),(3,'Third Year'),(4,'Final Year')}
+choices_year={(1,'First Year'),(2,'Second Year'),(3,'Third Year'),(4,'Final Year'),(5,'M.TECH'),(6,'PHD')}
 choice_type={(1,'Thsesis'),(2,'Article'),(3,'Publication'),(4,'Conference Paper'),(5,'Chapter'),(6,'Patent'),
 (7,'Poster'),(8,'Pre Print'),(9,'Research Internship  Report')}
-# choices_division={(1,'A'),(2,'B')}
-# choice_subjects={1,(('ASM101','ENGINEERING MATHEMATICS-I'),
-#     ('ASP102ABC','ENGINEERING PHYSICS'),
-#     ('ASC103ABC','ENGINEERING CHEMISTRY'),
-#     ('AMD104ABC','ENGINEERING MECHANICS'),
-#     ('CIME105ABC','ENGINEERING DRAWING'),
-#     ('ASM201','ENGINEERING MATHEMATICS-II'),
-#     ('ELE207ABC','ELECTROTECHNIQUES'),
-#     ('COM208ABC','FUNDAMENTALS OF COMPUTER PROGRAMMING'),
-#     ('ECE209ABC','BASIC OF ELECTRONICS ENGINEERING'),
-#     ('MED210ABC','BASIC MECHANICAL SYSTEMS'),
-#     ('CICH106ABC','BASIC OF CIVIL AND ENVIRONMENTAL ENGINEERING'),
-#     ('ASE211ABC','ENGLISH AND COMMUNICATIO SKILLS'),
-#     ('MED212ABC','WORKSHOP PRACTICE'),
-#     ('MA217','ENGINEERING MATHEMATHICS III')),
-#     2,(('EC201','ELECTRONICS CIRCUIT'),
-#     ('EC203','DIGITAL LOGIC DESIGN'),
-#     ('EC205','SIGNAL AND SYSTEM'),
-#     ('EE207','NETWORK ANALYSIS AND SYSTEMS'),
-#     ('EC202','STATICAL SIGNAL ANALYSIS'),
-#     ('EC204','PRINCIPLE OF COMMUNICATION SYSTEM'),
-#     ('EC206','MICROPROCESSORS AND MICROCONTROLLERS'),
-#     ('EC208','LINEAR IC APPLICATIONS'),
-#     ('EE214','CONTROL SYSTEMS')),
-#     3,(('EC301','DIGITAL COMMUNICATIONS'),
-#     ('EC303','DIGITAL SIGNAL PROCESSING'),
-#     ('EC305','ANALOG INTEGRATED CIRCUITS'),
-#     ('EC307','ELECTROMAGNETIC WAVES AND RADIATING SYSTEMS'),
-#     ('EC302','DATA COMMUNICATIONS AND NETWORKS'),
-#     ('EC304','DIGITAL INTEGRATED CIRCUITS'),
-#     ('EC306','EMBEDDED SYSTEMS'),
-#     ('EC308','FIBER OPTIC COMMUNICATION')),
-#     4,(('EC401','VLSI DESIGN'),
-#     ('EC403','MOBILE COMMUNICATION'),
-#     ('EC405','ELECTRONICS INSTRUMENTS'),
-#     ('EC402','RF & MICROWAVE ENGINEERING'),
-#     ('EC404','ELECTRONICS SYSTEM DESIGN'),
-#     ('MH404','INDUSTRIAL MANAGEMENT'))
-#    }
+choice_role={('FULL-TIME','Full Time'),('INTERNSHIP','Intern')}
+choice_field={('IT','IT'),('ECE-CORE','ECE-CORE'),('MANAGERIAL','ANALYST')}
 
 
 class Notice(models.Model):
@@ -62,13 +25,44 @@ class Project(models.Model):
     def __str__(self):
         return self.title
 
-    
 
-class Account(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
-    rollno=models.CharField(max_length=8)
-    year=models.IntegerField(choices=choices_year)
-    projects=models.ManyToManyField('Project',blank=True,null=True)
+class Faculty(models.Model):
+    name=models.CharField(max_length=200)
+    position=models.CharField(max_length=200)
+    email=models.CharField(max_length=200)
+    phoneno=models.CharField(max_length=10)
+    research=models.CharField(max_length=500)
+    pic=models.ImageField()
 
     def __str__(self):
-        return self.user.username
+        return self.name
+
+class Company(models.Model):
+    name=models.CharField(max_length=200)
+    date=models.DateField()
+    role=models.CharField(max_length=10, choices=choice_role)
+    doamin=models.CharField(max_length=10,choices=choice_field)
+    elegibilty=models.CharField(max_length=10,blank=True,null=True)
+    url=models.URLField(blank=True,null=True)
+    pic=models.ImageField()
+
+    def __str__(self):
+        return self.name
+
+class People(models.Model):
+    year=models.IntegerField(choices=choices_year)
+    rollno=models.CharField(max_length=8)
+    phoneno=models.CharField(max_length=10)
+
+    def __str__(self):
+        return self.rollno
+
+class Event(models.Model):
+    name=models.CharField(max_length=200)
+    date=models.DateField()
+    url=models.URLField()
+    desc=models.TextField(max_length=500)
+    pic=models.ImageField(null=True,blank=True)
+
+    def __str__(self):
+        return self.name

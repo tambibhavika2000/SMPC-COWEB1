@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="row mb-2" style="margin:50px; justify-content:center;">
+  <div class="col-md-11" style="margin:20px" >
+    <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+      <div class="col p-4 d-flex flex-column position-static">
+        <h3 class="mb-2">{{event.name}}</h3>
+         <strong class="d-inline-block mb-2 text-primary">{{event.date}}</strong>
+        <p class="card-text mb-auto">{{event.desc}}</p>
+        <a href="https://calendar.google.com/calendar/" class="mt-5" style="background-color: #00263b; display: inline;padding:10px; color:white;width:15%">Add to calender</a>
+      </div>
+      <div class="col-auto d-none d-lg-block">
+      <img src="../media/{{event.pic}}" style="vertical-align: middle;width: 200px;height: 200px;margin: 20px; "></img>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

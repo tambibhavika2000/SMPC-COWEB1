@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<div class="row mb-2" style="margin:50px; justify-content:center;">
+  {% for i in company %}
+  <div class="col-md-4" style="margin:20px" >
+    <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+      <div class="col p-4 d-flex flex-column position-static">
+        <h3 class="mb-2">{{i.name}}</h3>
+         <strong class="d-inline-block mb-2 text-primary">{{i.date}}</strong>
+         <strong class="d-inline-block mb-2 ">{{i.elegibilty}}</strong>
+        <div class="mb-3 text-muted"><i class="fa fa-users" aria-hidden="true" style="color:black; margin:5px;"></i>  {{i.role}}</div>
+        <a href="{{i.url}}" style="text-decoration:none;color:white;background-color:#000C19; padding:8px 10px; display:inline-block; width:80%" >Fill Your Consent</a><br>
+      </div>
+      <div class="col-auto d-none d-lg-block">
+      <img src="../media/{{i.pic}}" style="vertical-align: middle; width: 150px; height: 180px; margin:20px;"></img>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}

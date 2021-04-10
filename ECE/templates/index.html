@@ -24,7 +24,7 @@
 <section class="aboutus">
   <div class="container">
     <h1 style="float: left">ABOUT<span style="color: #f56600"> US</span></h1>
-    <hr style="border: 5px solid #031425; width:75%;margin-top:66px;" />
+    <hr style="border: 5px solid #031425; width:65%;margin-top:81px; margin-left: 330px;" />
     <img class="floating" src="/static/images/books_svg.svg">
     <div class="container">
       <h4>Sardar Vallabhbhai National Institute of Technology Surat (SVNIT or NIT Surat), is a public technical university established by the Parliament of India in 1961. <br>It is one of 31 National Institutes of Technology in India recognized by the Government of India as an Institute of National Importance. It is the Anchor Institute for the Auto and Engineering sector and will be training the workforce.
@@ -40,7 +40,7 @@
 <section class="testimonials martop hod">
   <div class="container">
     <h1 style="float: right">HEAD'S<span style="color: #f56600"> DESK</span></h1>
-    <hr style="border: 5px solid #031425; width:70%;margin-top:66px;">
+    <hr style="border: 5px solid #031425; width:55%;margin-top:81px;">
 
   </div>
   <div class="container">
@@ -78,54 +78,26 @@
 <section class="news martop event">
   <div class="container">
     <h1 style="float: left">EVENTS & <span style="color: #f56600"> SEMINARS</span></h1>
-    <hr style="border: 5px solid #031425; width:60%;margin-top:66px;">
+    <hr style="border: 5px solid #031425; width:45%;margin-top:81px; margin-left:620px">
   </div>
   <div class="container">
+  {% for i in event %}
     <div class="item col-md-4">
       <div class="single-news">
         <div class="news-head overlay">
           <div class="date">
-            <h4>05<span>May</span></h4>
+            <h4>10<span>Apr</span></h4>
           </div>
-          <img src="/static/images/event4.jpeg" alt="#">
+          <img src="/static/images/{{i.pic}}" alt="#">
         </div>
         <div class="news-content">
           <div class="button">
-            <a href="#" class="btn">Read More<i class="fa fa-angle-double-right"></i></a>
+            <a href="/event/{{i.id}}" class="btn">Read More<i class="fa fa-angle-double-right"></i></a>
           </div>
         </div>
       </div>
     </div>
-    <div class="item col-md-4">
-      <div class="single-news">
-        <div class="news-head overlay">
-          <div class="date">
-            <h4>05<span>May</span></h4>
-          </div>
-          <img src="/static/images/event5.jpeg" alt="#">
-        </div>
-        <div class="news-content">
-          <div class="button">
-            <a href="#" class="btn">Read More<i class="fa fa-angle-double-right"></i></a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="item col-md-4">
-      <div class="single-news">
-        <div class="news-head overlay">
-          <div class="date">
-            <h4>05<span>May</span></h4>
-          </div>
-          <img src="/static/images/event6.jpeg" alt="#">
-        </div>
-        <div class="news-content">
-          <div class="button">
-            <a href="#" class="btn">Read More<i class="fa fa-angle-double-right"></i></a>
-          </div>
-        </div>
-      </div>
-    </div>
+  {% endfor %}
   </div>
 </section>
 

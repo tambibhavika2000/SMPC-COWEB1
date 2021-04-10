@@ -11,7 +11,9 @@ from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 def index(request):
-    return render(request,'index.html')
+    events=Event.objects.all()
+    context={"event":events}
+    return render(request,'index.html',context)
 
 def noticestudent(request):
     notices=reversed(Notice.objects.all())
@@ -38,19 +40,20 @@ def noticeupload(request):
         title=request.POST.get('title')
         notice=request.FILES['file']
         code = request.POST.get('psw')
+        contactno=People.objects.values('phoneno')
+        contactstring=((',').join(i['phoneno'] for i in contactno))
         if(code=='1234'):
             notice1=Notice.objects.create(title=title,url=notice)
             notice1.save()
             url = "https://www.fast2sms.com/dev/bulkV2"
-            payload = "sender_id=TXTIND&message=New Notice Posted on Notice Board of SVNIT&route=v3&numbers=6350454263"
+            payload = "sender_id=TXTIND&message=New Notice Posted on Notice Board of SVNIT&route=v3&numbers="+contactstring
             headers = {
                 'authorization': "HtRglksoXVeP5Jzvjbxa91r6OQpDYcWfAS8T3EBynU2iZhFLdwTSngdN8UGxfKsL7QljX9vbakrHRZhu",
                 'Content-Type': "application/x-www-form-urlencoded",
                 'Cache-Control': "no-cache",
                         }
             response = requests.request("POST", url, data=payload, headers=headers)
-            print(response)
-    return redirect('/student')
+    return redirect('/teacher')
             
 
 def delete(request,pk):
@@ -107,9 +110,6 @@ def update(request):
         try:
             project1=Project.objects.create(user=user,title=title,abstract=abstract,url=url, projecttype=type1)
             project1.save()
-            A1=Account.objects.get(user=user)
-            A1.projects.add(project1)
-            A1.save()
             return redirect('profile')
         except:
             return redirect('login')
@@ -139,3 +139,30 @@ def see(request,pk):
         'user':P1.user
     }
     return render(request,'profile.html',context)
+
+def faculty(request):
+    data=Faculty.objects.all()
+    context={
+        'data':data,
+    }
+
+    return render(request,'faculty.html',context)
+
+
+@login_required(login_url='login')
+def tnp(request):
+    if(request.user.username =='admin'):
+         return redirect('login')
+    else:
+        company=Company.objects.all()
+        context={
+            'company': company,
+        }
+        return render(request,'tnp.html',context)
+
+
+
+def event(request,pk):
+    event=Event.objects.get(id=pk)
+    context={"event":event}
+    return render(request,'event.html',context)
