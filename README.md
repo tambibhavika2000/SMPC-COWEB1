@@ -17,5 +17,3 @@ Website for Electronics Department has been built !
 Teachers NoticeBoard : 1234 <br>
 Admin panel username : admin <br>
 Admin panel password : django@admin
-
-## Demo 
