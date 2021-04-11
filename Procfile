@@ -1,1 +1,0 @@
-web: gunicorn --pythonpath ECE ECE.wsgi --log-file -
