@@ -1,1 +1,1 @@
-web: gunicorn ECE.wsgi
+web: gunicorn ECE/ECE.wsgi
