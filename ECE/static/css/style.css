@@ -597,10 +597,6 @@ section.event {
   margin-left: 5px;
 }
 
-.active:after {
-  content: "\2212";
-}
-
 .panel {
   padding: 0px 10px;
   background-color: #f1f1f1;

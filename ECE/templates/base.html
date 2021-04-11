@@ -43,24 +43,24 @@
    <div class="header-menu">
       <div class="container">
          <ul class="dropDownMenu">
-            <li><a href="/index">Home</a></li>
-            <li><a href="/student">Notice Board</a>
+            <li><a href="/index" class="{% if request.resolver_match.url_name == "index" %}active{% endif %}">Home</a></li>
+            <li><a href="/student" class="{% if request.resolver_match.url_name == "teacher" or request.resolver_match.url_name == "student" %}active{% endif %}">Notice Board</a>
              <ul>
                   <li><a href="/teacher">Teachers</a></li>
                   <li><a href="/student">Students</a></li>
                </ul>
             </li>
             <li>
-               <a href="/research">Research and Innovations</a>
+               <a href="/research" class="{% if request.resolver_match.url_name == "research" %}active{% endif %}">Research and Innovations</a>
             </li>
             <li>
-               <a href="/tnp">TNP Section</a>
+               <a href="/tnp" class="{% if request.resolver_match.url_name == "tnp" %}active{% endif %}">TNP Section</a>
             </li>
             <li>
-               <a href="/faculty">Faculties</a>
+               <a href="/faculty" class="{% if request.resolver_match.url_name == "faculty" %}active{% endif %}">Faculties</a>
             </li>
             <li>
-               <a href="/admin">Admin</a>
+               <a href="/admin" class="{% if request.resolver_match.url_name == "admin" %}active{% endif %}">Admin</a>
             </li>
          </ul>
       </div>
