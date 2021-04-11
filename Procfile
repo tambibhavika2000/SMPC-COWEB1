@@ -1,1 +1,1 @@
-web: gunicorn --pythonpath ECE ECE.wsgi
+web: gunicorn ECE ECE.wsgi
